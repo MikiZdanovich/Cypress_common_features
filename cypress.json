@@ -1,0 +1,11 @@
+{
+  "projectId": "u2s3e6",
+  "env": {
+    "env": "dev",
+    "platform": "b2b"
+  },
+  "defaultCommandTimeout": 4000,
+  "pageLoadTimeout": 60000,
+  "ignoreTestFiles": "*.WIP.spec.js"
+}
+
