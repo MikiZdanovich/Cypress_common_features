@@ -1,7 +1,7 @@
 describe("Verify Checkboxes via WebDriverUni", () => {
     beforeEach(() => {
         // cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html")
-        cy.visit("http://www.webdriveruniversity.com/")
+        cy.visit("https://www.webdriveruniversity.com/")
         cy.get("#dropdown-checkboxes-radiobuttons").invoke('removeAttr', 'target').click({force: true})
     })
     it("Verify One Checkbox", () => {
@@ -40,6 +40,8 @@ describe("Verify Checkboxes via WebDriverUni", () => {
     })
 
     it.only('Handling Drop-Down', () => {
-        // [ToDo] Implementation of test for handling drop-down required
+        cy.get('#dropdowm-menu-1').select('c#')
+        cy.get('#dropdowm-menu-2').select('Maven').should('have.value', 'maven')
+        cy.get('#dropdowm-menu-3').select('JQuery').contains('JQuery')
     })
 })

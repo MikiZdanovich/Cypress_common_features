@@ -1,7 +1,7 @@
 describe("Handling Iframe & Modals", () => {
     beforeEach(() => {
         // cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html")
-        cy.visit("http://www.webdriveruniversity.com/")
+        cy.visit("https://www.webdriveruniversity.com/")
         cy.get("#iframe").invoke('removeAttr', 'target').click({force: true})
     })
     it.only("Handle webdriver-uni iframe and modal", () => {

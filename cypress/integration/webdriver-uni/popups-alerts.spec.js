@@ -1,7 +1,7 @@
 describe("Handling JS Allerts and PopUps", () => {
     beforeEach(() => {
         // cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html")
-        cy.visit("http://www.webdriveruniversity.com/")
+        cy.visit("https://www.webdriveruniversity.com/")
         cy.get("#popup-alerts").invoke('removeAttr', 'target').click({force: true})
     })
     it("Confirm JS alert contains the correct text", () => {
@@ -38,15 +38,14 @@ describe("Handling JS Allerts and PopUps", () => {
 
         cy.get('#button4').click()
             .then(() => {
-            expect(stub.getCall(0)).to.be.calledWith('Press a button!')
-        })
+                expect(stub.getCall(0)).to.be.calledWith('Press a button!')
+            })
             .then(() => {
-            return true
-        })
+                return true
+            })
             .then(() => {
-            cy.get('#confirm-alert-text').contains('You pressed OK!')
-        })
-
+                cy.get('#confirm-alert-text').contains('You pressed OK!')
+            })
 
 
     })

@@ -1,7 +1,7 @@
 describe("Validate webdriveruni homepage links ", () => {
     beforeEach(() => {
         // cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html")
-        cy.visit("http://www.webdriveruniversity.com/")
+        cy.visit("https://www.webdriveruniversity.com/")
         cy.get("#contact-us").invoke('removeAttr', 'target').click({force: true})
     })
 
@@ -15,7 +15,7 @@ describe("Validate webdriveruni homepage links ", () => {
         cy.go('back')
         // cy.reload(true) // reload without using cash
 
-        cy.get('#to-do-list').invoke('removeAttr', 'target').click({force:true})
+        cy.get('#to-do-list').invoke('removeAttr', 'target').click({force: true})
         cy.url().should('include', 'To-Do-List')
 
     });

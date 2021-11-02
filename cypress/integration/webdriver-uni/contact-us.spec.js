@@ -1,8 +1,8 @@
 describe("Test Contact Us form via WebdriverUni", () => {
-    beforeEach (() => {
+    beforeEach(() => {
         // cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html")
-        cy.visit("http://www.webdriveruniversity.com/")
-        cy.get("#contact-us").invoke('removeAttr', 'target').click({force:true})
+        cy.visit("https://www.webdriveruniversity.com/")
+        cy.get("#contact-us").invoke('removeAttr', 'target').click({force: true})
     })
     it.only("Should be able to submit a successful submission via contact us form", () => {
         cy.url().should('include', 'contactus')
